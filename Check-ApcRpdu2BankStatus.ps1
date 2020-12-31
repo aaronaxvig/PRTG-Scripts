@@ -7,15 +7,18 @@
 # https://www.powershellgallery.com/packages/PrtgXml
 # https://github.com/lordmilko/PrtgXml
 
+[System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("PSAvoidUsingPlainTextForPassword", "SnmpCredentialsFile")]
 Param(
     [Parameter(Mandatory=$true)]
     [string]
-    $Target
+    $Target,
 
-
+    [Parameter(Mandatory=$false)]
+    [string]
+    $SnmpCredentialsFile = '.\SnmpCredentials.psm1'
 )
 
-Import-Module .\SnmpCredentials.psm1
+Import-Module $SnmpCredentialsFile
 
 $SnmpInfo.Target = $Target
 
