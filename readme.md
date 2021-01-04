@@ -9,12 +9,14 @@
 * In PRTG, create a new sensor of type `EXE/Script Advanced` for your device
     * Name it, for example `Bank status`
     * Choose an EXE/Script, for example `Check-ApcRpdu2BankStatus.ps1`
-    * Specify parameters, for example `-Target %host` or `-Target %host -SnmpCredentialsFile Creds.ps1`
+    * Specify parameters
+        * At a minimum you must tell it which host to connect to, for example `-Target %host`
+        * If you named your credentials file something other than the default `SnmpCredentials.ps1` then you can also specify that file, for example `-Target %host -SnmpCredentialsFile Creds.ps1`.  This would be useful if you needed to specify different credentials for certain devices.
     * Choose whether to record the PowerShell errors or results with the Result Handling setting.
 
 # Troubleshooting
 
-To log issues with the script, make sure the Result Handling setting on the sensor is set to `Store result` (stores in cases of goor results or errors) or `Store result in case of error` (stores only for an error).  Those logs can be found in `%ProgramData%\Paessler\PRTG Network Monitor\Logs\sensors`.
+To log issues with the script, make sure the Result Handling setting on the sensor is set to `Store result` (stores in cases of goor results or errors) or `Store result in case of error` (stores only for an error).  Those logs can be found in `%ProgramData%\Paessler\PRTG Network Monitor\Logs\sensors`.  Only the latest result seems to be stored so it should not take up much space to always save the result.
 
 Another useful technique is to manually run the script.  In Windows PowerShell (x86):
 ````
