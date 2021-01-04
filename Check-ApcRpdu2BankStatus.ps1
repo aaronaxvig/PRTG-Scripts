@@ -15,10 +15,11 @@ Param(
 
     [Parameter(Mandatory=$false)]
     [string]
-    $SnmpCredentialsFile = '.\SnmpCredentials.psm1'
+    $SnmpCredentialsFile = 'SnmpCredentials.ps1'
 )
 
-Import-Module $SnmpCredentialsFile
+$path = Join-Path $PSScriptRoot $SnmpCredentialsFile
+. $path
 
 $SnmpInfo.Target = $Target
 
