@@ -20,6 +20,6 @@ To log issues with the script, make sure the Result Handling setting on the sens
 
 Another useful technique is to manually run the script.  In Windows PowerShell (x86):
 ````
-cd C:\Program Files (x86)\PRTG Network Monitor\Custom Sensors\EXEXML
-.\Check-ApcRpdu2BankStatus.ps1 -Target 10.0.0.123
+cd "%ProgramFiles x86%\PRTG Network Monitor\Custom Sensors\EXEXML"
+.\Check-ApcRpdu2BankStatus.ps1 -Target host.example.com
 ````
