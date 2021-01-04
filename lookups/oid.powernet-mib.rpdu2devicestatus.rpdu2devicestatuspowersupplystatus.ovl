@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-  <ValueLookup id="oid.powernet-mib.rpdu2devicestatus.rpdu2devicestatuspowersupply1status" desiredValue="1" undefinedState="Warning">
+  <ValueLookup id="oid.powernet-mib.rpdu2devicestatus.rpdu2devicestatuspowersupplystatus" desiredValue="1" undefinedState="Warning">
     <Lookups>
       <SingleInt state="Ok" value="1">
         normal

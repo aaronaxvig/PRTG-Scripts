@@ -93,14 +93,14 @@ Prtg {
             $value = $results | Where-Object { $_.OID -eq "1.3.6.1.4.1.318.1.1.26.4.3.1.13.$device" } | Select-Object -ExpandProperty Value
             Value ([int]$value.ToString())
             Unit 'Custom'
-            ValueLookup "oid.powernet-mib.rpdu2devicestatus.rpdu2devicestatuspowersupply1status"
+            ValueLookup "oid.powernet-mib.rpdu2devicestatus.rpdu2devicestatuspowersupplystatus"
         }
         Result {
             Channel "Device $device power supply 2 status"
             $value = $results | Where-Object { $_.OID -eq "1.3.6.1.4.1.318.1.1.26.4.3.1.14.$device" } | Select-Object -ExpandProperty Value
             Value ([int]$value.ToString())
             Unit 'Custom'
-            ValueLookup "oid.powernet-mib.rpdu2devicestatus.rpdu2devicestatuspowersupply1status"
+            ValueLookup "oid.powernet-mib.rpdu2devicestatus.rpdu2devicestatuspowersupplystatus"
         }
         Result {
             Channel "Device $device apparent power"
