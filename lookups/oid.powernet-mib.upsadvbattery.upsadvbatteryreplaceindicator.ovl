@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+  <ValueLookup id="oid.powernet-mib.upsadvbattery.upsadvbatteryreplaceindicator" desiredValue="2" undefinedState="Warning">
+    <Lookups>
+      <SingleInt state="Ok" value="1">
+        noBatteryNeedsReplacing
+      </SingleInt>
+      <SingleInt state="Error" value="2">
+        batteryNeedsReplacing
+      </SingleInt>
+    </Lookups>
+  </ValueLookup>
