@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+  <ValueLookup id="oid.powernet-mib.rpdu2devicestatus.rpdu2devicestatusloadstate" desiredValue="1" undefinedState="Warning">
+    <Lookups>
+      <SingleInt state="Warning" value="1">
+        lowLoad
+      </SingleInt>
+      <SingleInt state="Ok" value="2">
+        normal
+      </SingleInt>
+      <SingleInt state="Warning" value="3">
+        nearOverload
+      </SingleInt>
+      <SingleInt state="Error" value="4">
+        overload
+      </SingleInt>
+    </Lookups>
+  </ValueLookup>
