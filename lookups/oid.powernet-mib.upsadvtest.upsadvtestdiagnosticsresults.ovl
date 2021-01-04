@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+  <ValueLookup id="oid.powernet-mib.upsadvtest.upsadvtestdiagnosticsresults" desiredValue="1" undefinedState="Warning">
+    <Lookups>
+      <SingleInt state="Warning" value="1">
+        Ok
+      </SingleInt>
+      <SingleInt state="Error" value="2">
+        Failed
+      </SingleInt>
+      <SingleInt state="Warning" value="3">
+        Invalid test
+      </SingleInt>
+      <SingleInt state="OK" value="4">
+        Test in progress
+      </SingleInt>
+    </Lookups>
+  </ValueLookup>

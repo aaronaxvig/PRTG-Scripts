@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+  <ValueLookup id="oid.powernet-mib.upsadvtest.upsadvtestdiagnosticschedule" desiredValue="2" undefinedState="Warning">
+    <Lookups>
+      <SingleInt state="Warning" value="1">
+        Unknown
+      </SingleInt>
+      <SingleInt state="Ok" value="2">
+        Biweekly
+      </SingleInt>
+      <SingleInt state="Ok" value="3">
+        Weekly
+      </SingleInt>
+      <SingleInt state="Ok" value="4">
+        At turn on
+      </SingleInt>
+      <SingleInt state="Ok" value="5">
+        Never
+      </SingleInt>
+      <SingleInt state="Ok" value="6">
+        Four weeks
+      </SingleInt>
+      <SingleInt state="Ok" value="7">
+        Twelve weeks
+      </SingleInt>
+      <SingleInt state="Ok" value="8">
+        Biweekly since last test
+      </SingleInt>
+      <SingleInt state="Ok" value="9">
+        Weekly since last test
+      </SingleInt>
+    </Lookups>
+  </ValueLookup>
