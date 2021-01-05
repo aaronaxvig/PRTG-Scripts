@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
   <ValueLookup id="oid.powernet-mib.upsadvtest.upsadvtestcalibrationresults" desiredValue="1" undefinedState="Warning">
     <Lookups>
-      <SingleInt state="Warning" value="1">
+      <SingleInt state="OK" value="1">
         Ok
       </SingleInt>
       <SingleInt state="Warning" value="2">
         Invalid calibration
       </SingleInt>
-      <SingleInt state="Ok" value="3">
+      <SingleInt state="Warning" value="3">
         Calibration in progress
       </SingleInt>
     </Lookups>
