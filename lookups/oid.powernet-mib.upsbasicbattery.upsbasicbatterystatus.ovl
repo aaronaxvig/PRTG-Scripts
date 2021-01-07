@@ -2,7 +2,7 @@
   <ValueLookup id="oid.powernet-mib.upsbasicbattery.upsbasicbatterystatus" desiredValue="2" undefinedState="Warning">
     <Lookups>
       <SingleInt state="Warning" value="1">
-        unknown
+        Unknown
       </SingleInt>
       <SingleInt state="Ok" value="2">
         Normal

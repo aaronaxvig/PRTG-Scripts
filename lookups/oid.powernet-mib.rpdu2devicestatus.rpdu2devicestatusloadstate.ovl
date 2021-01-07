@@ -2,16 +2,16 @@
   <ValueLookup id="oid.powernet-mib.rpdu2devicestatus.rpdu2devicestatusloadstate" desiredValue="1" undefinedState="Warning">
     <Lookups>
       <SingleInt state="Warning" value="1">
-        lowLoad
+        Low load
       </SingleInt>
       <SingleInt state="Ok" value="2">
-        normal
+        Normal
       </SingleInt>
       <SingleInt state="Warning" value="3">
-        nearOverload
+        Near overload
       </SingleInt>
       <SingleInt state="Error" value="4">
-        overload
+        Overload
       </SingleInt>
     </Lookups>
   </ValueLookup>

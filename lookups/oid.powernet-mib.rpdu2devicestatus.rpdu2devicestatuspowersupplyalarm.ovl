@@ -2,10 +2,10 @@
   <ValueLookup id="oid.powernet-mib.rpdu2devicestatus.rpdu2devicestatuspowersupplyalarm" desiredValue="1" undefinedState="Warning">
     <Lookups>
       <SingleInt state="Ok" value="1">
-        normal
+        Normal
       </SingleInt>
       <SingleInt state="Warning" value="2">
-        alarm
+        Alarm
       </SingleInt>
     </Lookups>
   </ValueLookup>

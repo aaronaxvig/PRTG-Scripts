@@ -2,43 +2,43 @@
   <ValueLookup id="oid.powernet-mib.upsbasicoutput.upsbasicsystemstatus" desiredValue="1" undefinedState="Warning">
     <Lookups>
       <SingleInt state="Warning" value="1">
-        unknown
+        Unknown
       </SingleInt>
       <SingleInt state="Ok" value="2">
-        onLine
+        On line
       </SingleInt>
       <SingleInt state="Warning" value="3">
-        onBattery
+        On battery
       </SingleInt>
       <SingleInt state="Warning" value="4">
-        onSmartBoost
+        On SmartBoost
       </SingleInt>
       <SingleInt state="Error" value="5">
-        timedSleeping
+        Timed sleeping
       </SingleInt>
       <SingleInt state="Warning" value="6">
-        softwareBypass
+        Software bypass
       </SingleInt>
       <SingleInt state="Error" value="7">
-        off
+        Off
       </SingleInt>
       <SingleInt state="Error" value="8">
-        rebooting
+        Rebooting
       </SingleInt>
       <SingleInt state="Warning" value="9">
-        switchedBypass
+        Switched bypass
       </SingleInt>
       <SingleInt state="Error" value="10">
-        hardwareFailureBypass
+        Hardware failure bypass
       </SingleInt>
       <SingleInt state="Error" value="11">
-        sleepingUntilPowerReturn
+        Sleeping until power return
       </SingleInt>
       <SingleInt state="Warning" value="12">
-        onSmartTrim
+        On SmartTrim
       </SingleInt>
       <SingleInt state="Ok" value="12">
-        ecoMode
+        Eco-mode
       </SingleInt>
     </Lookups>
   </ValueLookup>
