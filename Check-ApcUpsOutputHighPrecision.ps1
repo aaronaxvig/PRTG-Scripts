@@ -27,50 +27,62 @@ $SnmpInfo.OID = '1.3.6.1.4.1.318.1.1.1.4.3'
 $results = Invoke-SNMPv3Walk @SnmpInfo
 
 Prtg {
-    Result {
-        Channel "Output voltage"
-        $value = $results | Where-Object { $_.OID -eq "1.3.6.1.4.1.318.1.1.1.4.3.1.0" } | Select-Object -ExpandProperty Value
-        Value ([decimal]$value.ToString() / 10)
-        Unit 'Custom'
-        CustomUnit 'Volts AC'
-        Float 1
+    if ($results | Where-Object { $_.OID -eq "1.3.6.1.4.1.318.1.1.1.4.3.1.0" }) {
+        Result {
+            Channel "Output voltage"
+            $value = $results | Where-Object { $_.OID -eq "1.3.6.1.4.1.318.1.1.1.4.3.1.0" } | Select-Object -ExpandProperty Value
+            Value ([decimal]$value.ToString() / 10)
+            Unit 'Custom'
+            CustomUnit 'Volts AC'
+            Float 1
+        }
     }
-    Result {
-        Channel "Output frequency"
-        $value = $results | Where-Object { $_.OID -eq "1.3.6.1.4.1.318.1.1.1.4.3.2.0" } | Select-Object -ExpandProperty Value
-        Value ([decimal]$value.ToString() / 10)
-        Unit 'Custom'
-        CustomUnit 'Hertz'
-        Float 1
+    if ($results | Where-Object { $_.OID -eq "1.3.6.1.4.1.318.1.1.1.4.3.2.0" }) {
+        Result {
+            Channel "Output frequency"
+            $value = $results | Where-Object { $_.OID -eq "1.3.6.1.4.1.318.1.1.1.4.3.2.0" } | Select-Object -ExpandProperty Value
+            Value ([decimal]$value.ToString() / 10)
+            Unit 'Custom'
+            CustomUnit 'Hertz'
+            Float 1
+        }
     }
-    Result {
-        Channel "Output load"
-        $value = $results | Where-Object { $_.OID -eq "1.3.6.1.4.1.318.1.1.1.4.3.3.0" } | Select-Object -ExpandProperty Value
-        Value ([decimal]$value.ToString() / 10)
-        Unit 'Percent'
-        Float 1
+    if ($results | Where-Object { $_.OID -eq "1.3.6.1.4.1.318.1.1.1.4.3.3.0" }) {
+        Result {
+            Channel "Output load"
+            $value = $results | Where-Object { $_.OID -eq "1.3.6.1.4.1.318.1.1.1.4.3.3.0" } | Select-Object -ExpandProperty Value
+            Value ([decimal]$value.ToString() / 10)
+            Unit 'Percent'
+            Float 1
+        }
     }
-    Result {
-        Channel "Output current"
-        $value = $results | Where-Object { $_.OID -eq "1.3.6.1.4.1.318.1.1.1.4.3.4.0" } | Select-Object -ExpandProperty Value
-        Value ([decimal]$value.ToString() / 10)
-        Unit 'Custom'
-        CustomUnit 'Amps'
-        Float 1
+    if ($results | Where-Object { $_.OID -eq "1.3.6.1.4.1.318.1.1.1.4.3.4.0" }) {
+        Result {
+            Channel "Output current"
+            $value = $results | Where-Object { $_.OID -eq "1.3.6.1.4.1.318.1.1.1.4.3.4.0" } | Select-Object -ExpandProperty Value
+            Value ([decimal]$value.ToString() / 10)
+            Unit 'Custom'
+            CustomUnit 'Amps'
+            Float 1
+        }
     }
-    Result {
-        Channel "Output efficiency"
-        $value = $results | Where-Object { $_.OID -eq "1.3.6.1.4.1.318.1.1.1.4.3.5.0" } | Select-Object -ExpandProperty Value
-        Value ([decimal]$value.ToString() / 10)
-        Unit 'Percent'
-        Float 1
+    if ($results | Where-Object { $_.OID -eq "1.3.6.1.4.1.318.1.1.1.4.3.5.0" }) {
+        Result {
+            Channel "Output efficiency"
+            $value = $results | Where-Object { $_.OID -eq "1.3.6.1.4.1.318.1.1.1.4.3.5.0" } | Select-Object -ExpandProperty Value
+            Value ([decimal]$value.ToString() / 10)
+            Unit 'Percent'
+            Float 1
+        }
     }
-    Result {
-        Channel "Output energy usage"
-        $value = $results | Where-Object { $_.OID -eq "1.3.6.1.4.1.318.1.1.1.4.3.6.0" } | Select-Object -ExpandProperty Value
-        Value ([decimal]$value.ToString() / 100)
-        Unit 'Custom'
-        CustomUnit 'kWh'
-        Float 1
+    if ($results | Where-Object { $_.OID -eq "1.3.6.1.4.1.318.1.1.1.4.3.6.0" }) {
+        Result {
+            Channel "Output energy usage"
+            $value = $results | Where-Object { $_.OID -eq "1.3.6.1.4.1.318.1.1.1.4.3.6.0" } | Select-Object -ExpandProperty Value
+            Value ([decimal]$value.ToString() / 100)
+            Unit 'Custom'
+            CustomUnit 'kWh'
+            Float 1
+        }
     }
 }
