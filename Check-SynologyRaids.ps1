@@ -70,6 +70,7 @@ Prtg {
                 Unit 'BytesDisk'
             }
         }
+        
         if ($freeSize -gt 0) {
             if ($totalSize -gt 0) {
                 Result {
