@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+  <ValueLookup id="oid.synology-system-mib.synodisk.diskstatus" desiredValue="1" undefinedState="Warning">
+    <Lookups>
+      <SingleInt state="Ok" value="1">
+        Normal
+      </SingleInt>
+      <SingleInt state="Warning" value="2">
+        Initialized
+      </SingleInt>
+      <SingleInt state="Warning" value="3">
+        Not initialized
+      </SingleInt>
+      <SingleInt state="Error" value="4">
+        System partition failed
+      </SingleInt>
+      <SingleInt state="Error" value="5">
+        Crashed
+      </SingleInt>
+    </Lookups>
+  </ValueLookup>
