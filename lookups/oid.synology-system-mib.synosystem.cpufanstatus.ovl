@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+  <ValueLookup id="oid.synology-system-mib.synosystem.cpufanstatus" desiredValue="1" undefinedState="Warning">
+    <Lookups>
+      <SingleInt state="Ok" value="1">
+        Normal
+      </SingleInt>
+      <SingleInt state="Error" value="2">
+        Failed
+      </SingleInt>
+    </Lookups>
+  </ValueLookup>

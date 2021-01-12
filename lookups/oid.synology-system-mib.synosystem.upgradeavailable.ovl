@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+  <ValueLookup id="oid.synology-system-mib.synosystem.upgradeavailable" desiredValue="1" undefinedState="Warning">
+    <Lookups>
+      <SingleInt state="Warning" value="1">
+        Available
+      </SingleInt>
+      <SingleInt state="Ok" value="2">
+        Unavailable
+      </SingleInt>
+      <SingleInt state="Ok" value="3">
+        Connecting
+      </SingleInt>
+      <SingleInt state="Ok" value="4">
+        Disconnected
+      </SingleInt>
+      <SingleInt state="Warning" value="5">
+        Others
+      </SingleInt>
+    </Lookups>
+  </ValueLookup>
