@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+  <ValueLookup id="oid.synology-system-mib.synoraid.raidstatus" desiredValue="1" undefinedState="Warning">
+    <Lookups>
+      <SingleInt state="Ok" value="1">
+        Normal
+      </SingleInt>
+      <SingleInt state="Warning" value="2">
+        Repairing
+      </SingleInt>
+      <SingleInt state="Warning" value="3">
+        Migrating
+      </SingleInt>
+      <SingleInt state="Warning" value="4">
+        Expanding
+      </SingleInt>
+      <SingleInt state="Warning" value="5">
+        Deleting
+      </SingleInt>
+      <SingleInt state="Warning" value="6">
+        Creating
+      </SingleInt>
+      <SingleInt state="Warning" value="7">
+        RAID syncing
+      </SingleInt>
+      <SingleInt state="Warning" value="8">
+        RAID partity checking
+      </SingleInt>
+      <SingleInt state="Warning" value="9">
+        RAID assembling
+      </SingleInt>
+      <SingleInt state="Warning" value="10">
+        Canceling
+      </SingleInt>
+    </Lookups>
+  </ValueLookup>
