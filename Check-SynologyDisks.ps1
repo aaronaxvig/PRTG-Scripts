@@ -29,7 +29,17 @@ $results = Invoke-SNMPv3Walk @SnmpInfo
 Prtg {
     $diskCount = 0
 
-    while ($results | Where-Object { $_.OID -eq "1.3.6.1.4.1.6574.2.1.1.1.$diskCount" }) {
+    # A DS218j running DSM 6.2.2-24922 was observed to be missing 6574.2.1.1.1.0 (the index column of the table).
+    # In that case, the first entry under 6574.2 was 6574.2.1.1.2.0 (the name column of the table).
+    # It seems preferable to use the index if it is available, so we check and substitute if it is not.
+    # This is documented as fixed in an update and updating DID resolve the issue: https://www.synology.com/en-us/releaseNote/DSM?model=DS218j#ver_25426
+    # "Fixed the issue where SNMP did not provide the indices of Disk and RAID correctly."
+    $loopOid = "1.3.6.1.4.1.6574.2.1.1.2"
+    if ($results | Where-Object { $_.OID -eq "1.3.6.1.4.1.6574.2.1.1.1.$diskCount" }) {
+        $loopOid = "1.3.6.1.4.1.6574.2.1.1.1"
+    }
+
+    while ($results | Where-Object { $_.OID -eq "$loopOid.$diskCount" }) {
         # Sensible default name
         $diskId = "Disk $diskCount"
 
