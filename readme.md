@@ -23,3 +23,8 @@ Another useful technique is to manually run the script.  In Windows PowerShell (
 cd "%ProgramFiles x86%\PRTG Network Monitor\Custom Sensors\EXEXML"
 .\Check-ApcRpdu2BankStatus.ps1 -Target host.example.com
 ````
+
+# Sources
+
+* [APC info](https://oidref.com/1.3.6.1.4.1.318)
+* [Synology info](https://global.download.synology.com/download/Document/Software/DeveloperGuide/Firmware/DSM/All/enu/Synology_DiskStation_MIB_Guide.pdf)
