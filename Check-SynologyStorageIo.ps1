@@ -37,6 +37,26 @@ Prtg {
             $deviceName = ($results | Where-Object { $_.OID -eq "1.3.6.1.4.1.6574.101.1.1.2.$deviceCount" } | Select-Object -ExpandProperty Value).ToString()
         }
 
+        if ($results | Where-Object { $_.OID -eq "1.3.6.1.4.1.6574.101.1.1.5.$deviceCount" }) {
+            Result {
+                Channel "$deviceName read operations"
+                $value = $results | Where-Object { $_.OID -eq "1.3.6.1.4.1.6574.101.1.1.5.$deviceCount" } | Select-Object -ExpandProperty Value
+                Value ([int]$value.ToString())
+                Unit 'Operations'
+                Mode 'Difference'
+            }
+        }
+
+        if ($results | Where-Object { $_.OID -eq "1.3.6.1.4.1.6574.101.1.1.6.$deviceCount" }) {
+            Result {
+                Channel "$deviceName write operations"
+                $value = $results | Where-Object { $_.OID -eq "1.3.6.1.4.1.6574.101.1.1.6.$deviceCount" } | Select-Object -ExpandProperty Value
+                Value ([int]$value.ToString())
+                Unit 'Operations'
+                Mode 'Difference'
+            }
+        }
+
         if ($results | Where-Object { $_.OID -eq "1.3.6.1.4.1.6574.101.1.1.8.$deviceCount" }) {
             Result {
                 Channel "$deviceName load average"
