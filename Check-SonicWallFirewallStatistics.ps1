@@ -126,4 +126,14 @@ Prtg {
             }
         }
     }
+
+    if ($results | Where-Object { $_.OID -eq "1.3.6.1.4.1.8741.1.3.1.9.0" }) {
+        Result {
+            Channel "Content Filtering Service status"
+            $value = $results | Where-Object { $_.OID -eq "1.3.6.1.4.1.8741.1.3.1.9.0" } | Select-Object -ExpandProperty Value
+            Value ([int]$value.ToString())
+            Unit 'Custom'
+            ValueLookup "oid.sonicwall-firewall-ip-statistics-mib.sonicwall-fw-stats.soniccfs"
+        }
+    }
 }

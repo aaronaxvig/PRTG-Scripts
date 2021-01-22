@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+  <ValueLookup id="oid.sonicwall-firewall-ip-statistics-mib.sonicwall-fw-stats.soniccfs" desiredValue="1" undefinedState="Warning">
+    <Lookups>
+      <SingleInt state="Ok" value="1">
+        Disabled
+      </SingleInt>
+      <SingleInt state="Ok" value="2">
+        Enabled
+      </SingleInt>
+    </Lookups>
+  </ValueLookup>
