@@ -45,7 +45,6 @@ Prtg {
                 Channel "Connection cache entries"
                 Value $entries
                 Unit 'Count'
-                LimitMaxWarning 90
             }
 
             Result {
