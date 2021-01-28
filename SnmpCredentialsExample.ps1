@@ -1,3 +1,4 @@
+[System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("UseDeclaredVarsMoreThanAssignments", "SnmpInfo")]
 $SnmpInfo = @{
     UserName   = 'UserName1234'
     Target     = ''
