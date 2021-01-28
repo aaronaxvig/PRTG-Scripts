@@ -42,8 +42,8 @@ Prtg {
             Channel "Battery temperature"
             $value = $results | Where-Object { $_.OID -eq "1.3.6.1.4.1.318.1.1.1.2.3.2.0" } | Select-Object -ExpandProperty Value
             Value ([int]$value.ToString() / 10)
-            Unit 'Custom'
-            CustomUnit 'Celsius'
+            Unit 'Temperature'
+            Float 1
         }
     }
 
@@ -54,6 +54,7 @@ Prtg {
             Value ([int]$value.ToString() / 10)
             Unit 'Custom'
             CustomUnit 'Volts'
+            Float 1
         }
     }
 }
