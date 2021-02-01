@@ -25,7 +25,6 @@ $SnmpInfo.ComputerName = $Target
 
 $SnmpInfo.ObjectIdentifier = '1.3.6.1.4.1.10642.3.1'
 $results = Invoke-SnmpWalk @SnmpInfo
-$results
 
 Prtg {
     if ($results | Where-Object { $_.OID -eq "1.3.6.1.4.1.10642.3.1.4.0" }) {
