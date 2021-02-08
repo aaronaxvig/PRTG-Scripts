@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+  <ValueLookup id="oid.powernet-mib.atsstatus.atsstatuspowersupply" desiredValue="2" undefinedState="Warning">
+    <Lookups>
+      <SingleInt state="Error" value="1">
+        Power supply failure
+      </SingleInt>
+      <SingleInt state="Ok" value="2">
+        Power supply OK
+      </SingleInt>
+    </Lookups>
+  </ValueLookup>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+  <ValueLookup id="oid.powernet-mib.atsstatus.atsstatusselectedsource" desiredValue="2" undefinedState="Warning">
+    <Lookups>
+      <SingleInt state="Ok" value="1">
+        Source A
+      </SingleInt>
+      <SingleInt state="Ok" value="2">
+        Source B
+      </SingleInt>
+    </Lookups>
+  </ValueLookup>

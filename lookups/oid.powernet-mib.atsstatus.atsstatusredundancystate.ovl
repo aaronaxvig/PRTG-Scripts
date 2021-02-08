@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+  <ValueLookup id="oid.powernet-mib.atsstatus.atsstatusredundancystate" desiredValue="2" undefinedState="Warning">
+    <Lookups>
+      <SingleInt state="Error" value="1">
+        Redundancy lost
+      </SingleInt>
+      <SingleInt state="Ok" value="2">
+        Fully redundant
+      </SingleInt>
+    </Lookups>
+  </ValueLookup>
