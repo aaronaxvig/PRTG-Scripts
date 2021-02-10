@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+  <ValueLookup id="veeam-archiver-powershell-model-enums-vbojobstatus" desiredValue="2" undefinedState="Warning">
+    <Lookups>
+      <SingleInt state="Ok" value="0">
+        Stopped
+      </SingleInt>
+      <SingleInt state="Ok" value="1">
+        Running
+      </SingleInt>
+      <SingleInt state="Ok" value="2">
+        Success
+      </SingleInt>
+      <SingleInt state="Error" value="3">
+        Failed
+      </SingleInt>
+      <SingleInt state="Warning" value="4">
+        Warning
+      </SingleInt>
+      <SingleInt state="Warning" value="5">
+        Not configured
+      </SingleInt>
+      <SingleInt state="Warning" value="6">
+        Disconnected
+      </SingleInt>
+      <SingleInt state="Ok" value="7">
+        Queued
+      </SingleInt>
+    </Lookups>
+  </ValueLookup>
